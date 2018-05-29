@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 登录模块配置信息 -->
+	<!-- struts2笔记 https://blog.csdn.net/baolibin528/article/details/38405453 -->
+	<package name="login" namespace="/"  extends="struts-default">
+	    <!-- 打开登录页面，当省略class属性时,Struts2会自动实例化com.opensymphony.xwork2.ActionSupport类,作为当前的Action,
+	    该类中有execute方法，并返回success-->
+<!-- 		<action name="toLogin" >
+		    <result name="success">index.jsp</result>
+		</action> -->
+		<!-- 登录校验 -->
+		<action name="login" class="com.tjcsims.action.TeacherLoginAction" >
+		   <result name="success">/login_success.jsp</result>
+		   <result name="error">/login_error.jsp</result>
+ 		   <result name="fail">/login_fail.jsp</result>
+		</action>
+<!-- 		
+		<action name="testlogin" class="com.tjcsims.action.TestAction">
+			<result>/login_success.jsp</result>
+			<result name="error">/login_error.jsp</result>
+			<result name="loggedinelsewhere">/loggedinelsewhere.jsp</result>
+		</action>
+		<action name="testlogout"  class="com.tjcsims.action.TestAction" method="logout">
+		    <result name="logout">/index.jsp</result>
+		    <result name="logout_error">/logout_error.jsp</result>
+		</action> -->
+		<action name="logout"  class="com.tjcsims.action.TeacherLoginAction" method="logout">
+		    <result name="logout">/index.jsp</result>
+		    <result name="logout_error">/logout_error.jsp</result>
+		</action>
+		<action name="register"  class="com.tjcsims.action.TeacherLoginAction" method="register">
+		    <result>/MyJsp.jsp</result>
+		</action>
+		<!-- 生成验证码 -->
+<!-- 		    <action name="createImage" class="com.qn.action.CreateImageAction" >
+		       <result name="success" type="stream">
+		          <param name="inputName">
+		              imageStream
+		          </param>           
+		       </result>        
+		    </action> -->
+	</package>
+</struts>

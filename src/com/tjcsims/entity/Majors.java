@@ -12,8 +12,8 @@ public class Majors implements java.io.Serializable {
 	// Fields
 
 	private Integer majorsId;
-	private Set<Students> studentses = new HashSet<Students>(0);
-	private Set<Courses> courseses = new HashSet<Courses>(0);
+	private Set studentses = new HashSet(0);
+	private Set courseses = new HashSet(0);
 
 	// Constructors
 
@@ -22,7 +22,7 @@ public class Majors implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Majors(Set<Students> studentses, Set<Courses> courseses) {
+	public Majors(Set studentses, Set courseses) {
 		this.studentses = studentses;
 		this.courseses = courseses;
 	}
@@ -37,19 +37,19 @@ public class Majors implements java.io.Serializable {
 		this.majorsId = majorsId;
 	}
 
-	public Set<Students> getStudentses() {
+	public Set getStudentses() {
 		return this.studentses;
 	}
 
-	public void setStudentses(Set<Students> studentses) {
+	public void setStudentses(Set studentses) {
 		this.studentses = studentses;
 	}
 
-	public Set<Courses> getCourseses() {
+	public Set getCourseses() {
 		return this.courseses;
 	}
 
-	public void setCourseses(Set<Courses> courseses) {
+	public void setCourseses(Set courseses) {
 		this.courseses = courseses;
 	}
 

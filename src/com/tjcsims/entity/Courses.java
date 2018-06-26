@@ -1,5 +1,8 @@
 package com.tjcsims.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Courses entity. @author MyEclipse Persistence Tools
  */
@@ -14,6 +17,7 @@ public class Courses implements java.io.Serializable {
 	private String coursesName;
 	private short coursesType;
 	private short coursesCredit;
+	private Set scoreses = new HashSet(0);
 
 	// Constructors
 
@@ -22,12 +26,14 @@ public class Courses implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Courses(Classes classes, Majors majors, String coursesName, short coursesType, short coursesCredit) {
+	public Courses(Classes classes, Majors majors, String coursesName, short coursesType, short coursesCredit,
+			Set scoreses) {
 		this.classes = classes;
 		this.majors = majors;
 		this.coursesName = coursesName;
 		this.coursesType = coursesType;
 		this.coursesCredit = coursesCredit;
+		this.scoreses = scoreses;
 	}
 
 	// Property accessors
@@ -78,6 +84,14 @@ public class Courses implements java.io.Serializable {
 
 	public void setCoursesCredit(short coursesCredit) {
 		this.coursesCredit = coursesCredit;
+	}
+
+	public Set getScoreses() {
+		return this.scoreses;
+	}
+
+	public void setScoreses(Set scoreses) {
+		this.scoreses = scoreses;
 	}
 
 }

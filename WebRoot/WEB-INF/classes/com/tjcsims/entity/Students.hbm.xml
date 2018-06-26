@@ -8,7 +8,7 @@
     <class name="com.tjcsims.entity.Students" table="students" catalog="csims">
         <id name="studentsId" type="integer">
             <column name="StudentsId" />
-            <generator class="identity" />
+            <generator class="identity"></generator>
         </id>
         <many-to-one name="classes" class="com.tjcsims.entity.Classes" fetch="select">
             <column name="ClassesId" />

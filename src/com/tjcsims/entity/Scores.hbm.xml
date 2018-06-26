@@ -8,10 +8,15 @@
     <class name="com.tjcsims.entity.Scores" table="scores" catalog="csims">
         <id name="scoresId" type="integer">
             <column name="ScoresId" />
-            <generator class="identity" />
+            <generator class="identity"></generator>
         </id>
         <many-to-one name="students" class="com.tjcsims.entity.Students" fetch="select">
             <column name="StudentsId" />
+        </many-to-one>
+        <many-to-one name="courses" class="com.tjcsims.entity.Courses" fetch="select">
+            <column name="CoursesId">
+                <comment>课程编号</comment>
+            </column>
         </many-to-one>
         <property name="scoresTerm" type="string">
             <column name="ScoresTerm" length="32">

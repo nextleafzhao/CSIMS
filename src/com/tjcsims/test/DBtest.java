@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import com.tjcsims.dao.BaseHibernateDAO;
 import com.tjcsims.dao.HibernateSessionFactory;
+import com.tjcsims.entity.Scores;
 import com.tjcsims.entity.Teachers;
 
 public class DBtest {
@@ -35,9 +36,42 @@ public class DBtest {
 			}
 		session.close();
 	}
+	@Test
 	public void test2() {
-		// TODO 自动生成的方法存根
-		
+		Session session=HibernateSessionFactory.getSession();
+		Query query=session.createQuery("from Scores");
+		List<Scores> list=query.list();
+		Iterator i=list.iterator();
+		if(i.hasNext()){
+			Scores t=(Scores)i.next();  
+			System.out.println(
+					"学号"
+					+t.getStudents().getStudentsId()
+					+"，姓名"
+					+t.getStudents().getStudentsName()
+					+ "，性别"
+					+t.getStudents().getStudentsSex()
+					+ "，班级编号"
+					+t.getStudents().getClasses().getClassesId()
+					+ "，专业编号"
+					+t.getStudents().getMajors().getMajorsId()
+					+ "，课程代码"
+					+t.getCourses().getCoursesId()
+					+ "，课程名"
+					+t.getCourses().getCoursesName()
+					+ "，课程性质"
+					+t.getCourses().getCoursesType()
+					+ "，学分"
+					+t.getCourses().getCoursesCredit()
+					+ "，学期"
+					+t.getScoresTerm()
+					+"，总分："
+					+t.getScoresTotal());
+			
+		}else{
+			System.out.println("不存在");
+			}
+		session.close();
 	}
 	public void test3() {
 		// TODO 自动生成的方法存根

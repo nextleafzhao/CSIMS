@@ -11,7 +11,7 @@
 		</action> -->
 		<!-- 登录校验 -->
 		<action name="login" class="com.tjcsims.action.TeacherLoginAction" >
-		   <result name="success">/login_success.jsp</result>
+		   <result name="success">/space.jsp</result>
 		   <result name="error">/login_error.jsp</result>
  		   <result name="fail">/login_fail.jsp</result>
 		</action>

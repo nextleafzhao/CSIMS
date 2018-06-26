@@ -10,7 +10,7 @@
             <column name="AssessmentsId" />
             <generator class="identity" />
         </id>
-        <many-to-one name="students" class="com.tjcsims.entity.Students" fetch="select"><!-- fetch="select"不采用连接查询(默认) -->
+        <many-to-one name="students" class="com.tjcsims.entity.Students" fetch="select">
             <column name="StudentsId" />
         </many-to-one>
         <many-to-one name="teachers" class="com.tjcsims.entity.Teachers" fetch="select">

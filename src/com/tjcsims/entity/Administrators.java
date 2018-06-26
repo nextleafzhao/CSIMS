@@ -11,14 +11,6 @@ public class Administrators implements java.io.Serializable {
 	private String administratorsId;
 	private String administratorsPasswd;
 	private String administratorsRole;
-	/*
-	 * CDSM 所有院系专业管理的管理员
-	 * CSM 所有班级课表管理的管理员
-	 * CBM 所有课程和公告管理的管理员
-	 * PIM 所有成绩信息管理的管理员
-	 * TIM 所有教师信息管理的管理员
-	 * SIMRM 所有学生信息管理的管理员
-	 * */
 
 	// Constructors
 

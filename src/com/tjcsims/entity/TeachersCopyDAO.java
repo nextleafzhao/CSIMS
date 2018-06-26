@@ -1,12 +1,8 @@
 package com.tjcsims.entity;
 
-import com.tjcsims.dao.BaseHibernateDAO;
 import java.util.List;
-
-import org.hibernate.HibernateException;
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
-import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,24 +27,16 @@ public class TeachersCopyDAO extends BaseHibernateDAO {
 	public static final String TEACHERS_SEX = "teachersSex";
 	public static final String TEACHERS_BIRTHDAY = "teachersBirthday";
 	public static final String TEACHERS_EMAIL = "teachersEmail";
+	public static final String REMARKS = "remarks";
 
 	public void save(TeachersCopy transientInstance) {
-        log.debug("saving Teachers instance");
-     /*开启事务*/
-		Transaction ts = getSession().beginTransaction();
-        try {
-            getSession().save(transientInstance);
-            ts.commit();
-            log.debug("save successful");
-        } catch (HibernateException re) {
-            log.error("save failed", re);
-            re.printStackTrace();
-            ts.rollback();
-            throw re;
-        }finally {
-			/*关闭连接*/
-        	getSession().flush();
-        	getSession().close();
+		log.debug("saving TeachersCopy instance");
+		try {
+			getSession().save(transientInstance);
+			log.debug("save successful");
+		} catch (RuntimeException re) {
+			log.error("save failed", re);
+			throw re;
 		}
 	}
 
@@ -122,6 +110,10 @@ public class TeachersCopyDAO extends BaseHibernateDAO {
 
 	public List findByTeachersEmail(Object teachersEmail) {
 		return findByProperty(TEACHERS_EMAIL, teachersEmail);
+	}
+
+	public List findByRemarks(Object remarks) {
+		return findByProperty(REMARKS, remarks);
 	}
 
 	public List findAll() {

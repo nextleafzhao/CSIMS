@@ -180,7 +180,7 @@ var name = $( "#name" ),
             <div class="form-actions">
                 <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover">忘记密码?</a></span>
                 <span class="pull-right"><a id="regte" class="btn btn-warning">注册</a></span>
-                <span class="pull-right"><a type="submit" class="btn btn-success" >登录</a></span>
+                <span class="pull-right"><input type="submit" class="btn btn-success" value="登录"/></span>
             </div>
         </form>
         <form id="recoverform" action="#" class="form-vertical">

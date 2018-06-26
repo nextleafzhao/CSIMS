@@ -10,6 +10,7 @@ public class Scores implements java.io.Serializable {
 
 	private Integer scoresId;
 	private Students students;
+	private Courses courses;
 	private String scoresTerm;
 	private float scoresPeacetime;
 	private float scoresExamination;
@@ -22,9 +23,10 @@ public class Scores implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Scores(Students students, String scoresTerm, float scoresPeacetime, float scoresExamination,
+	public Scores(Students students, Courses courses, String scoresTerm, float scoresPeacetime, float scoresExamination,
 			float scoresTotal) {
 		this.students = students;
+		this.courses = courses;
 		this.scoresTerm = scoresTerm;
 		this.scoresPeacetime = scoresPeacetime;
 		this.scoresExamination = scoresExamination;
@@ -47,6 +49,14 @@ public class Scores implements java.io.Serializable {
 
 	public void setStudents(Students students) {
 		this.students = students;
+	}
+
+	public Courses getCourses() {
+		return this.courses;
+	}
+
+	public void setCourses(Courses courses) {
+		this.courses = courses;
 	}
 
 	public String getScoresTerm() {

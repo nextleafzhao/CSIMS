@@ -3,4 +3,15 @@
 
 <hibernate-reverse-engineering>
 	<table name="classes" catalog="csims"></table>
+	<table name="scores" catalog="csims">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="students" catalog="csims">
+		<primary-key>
+			<generator class="identity"></generator>
+		</primary-key>
+	</table>
+	<table name="courses" catalog="csims"></table>
 </hibernate-reverse-engineering>

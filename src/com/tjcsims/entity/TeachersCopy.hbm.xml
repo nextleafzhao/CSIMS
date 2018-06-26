@@ -30,5 +30,8 @@
         <property name="teachersEmail" type="string">
             <column name="TeachersEmail" length="24" />
         </property>
+        <property name="remarks" type="string">
+            <column name="remarks" />
+        </property>
     </class>
 </hibernate-mapping>

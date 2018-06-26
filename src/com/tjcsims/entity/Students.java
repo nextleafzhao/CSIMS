@@ -21,8 +21,8 @@ public class Students implements java.io.Serializable {
 	private String studentsAddress;
 	private String studentsTel;
 	private String studentsBeginYear;
-	private Set<Assessments> assessmentses = new HashSet<Assessments>(0);
-	private Set<Scores> scoreses = new HashSet<Scores>(0);
+	private Set assessmentses = new HashSet(0);
+	private Set scoreses = new HashSet(0);
 
 	// Constructors
 
@@ -33,7 +33,7 @@ public class Students implements java.io.Serializable {
 	/** full constructor */
 	public Students(Classes classes, Majors majors, String studentsPasswd, String studentsName, short studentsSex,
 			String studentsBirthday, String studentsAddress, String studentsTel, String studentsBeginYear,
-			Set<Assessments> assessmentses, Set<Scores> scoreses) {
+			Set assessmentses, Set scoreses) {
 		this.classes = classes;
 		this.majors = majors;
 		this.studentsPasswd = studentsPasswd;
@@ -129,19 +129,19 @@ public class Students implements java.io.Serializable {
 		this.studentsBeginYear = studentsBeginYear;
 	}
 
-	public Set<Assessments> getAssessmentses() {
+	public Set getAssessmentses() {
 		return this.assessmentses;
 	}
 
-	public void setAssessmentses(Set<Assessments> assessmentses) {
+	public void setAssessmentses(Set assessmentses) {
 		this.assessmentses = assessmentses;
 	}
 
-	public Set<Scores> getScoreses() {
+	public Set getScoreses() {
 		return this.scoreses;
 	}
 
-	public void setScoreses(Set<Scores> scoreses) {
+	public void setScoreses(Set scoreses) {
 		this.scoreses = scoreses;
 	}
 

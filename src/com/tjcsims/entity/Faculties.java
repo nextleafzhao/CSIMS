@@ -12,7 +12,7 @@ public class Faculties implements java.io.Serializable {
 	// Fields
 
 	private Integer facultiesId;
-	private Set<Teachers> teacherses = new HashSet<Teachers>(0);
+	private Set teacherses = new HashSet(0);
 
 	// Constructors
 
@@ -21,16 +21,26 @@ public class Faculties implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Faculties(Set<Teachers> teacherses) {this.teacherses = teacherses;}
+	public Faculties(Set teacherses) {
+		this.teacherses = teacherses;
+	}
 
 	// Property accessors
 
-	public Integer getFacultiesId() {return this.facultiesId;}
+	public Integer getFacultiesId() {
+		return this.facultiesId;
+	}
 
-	public void setFacultiesId(Integer facultiesId) {this.facultiesId = facultiesId;}
+	public void setFacultiesId(Integer facultiesId) {
+		this.facultiesId = facultiesId;
+	}
 
-	public Set<Teachers> getTeacherses() {return this.teacherses;}
+	public Set getTeacherses() {
+		return this.teacherses;
+	}
 
-	public void setTeacherses(Set<Teachers> teacherses) {this.teacherses = teacherses;}
+	public void setTeacherses(Set teacherses) {
+		this.teacherses = teacherses;
+	}
 
 }

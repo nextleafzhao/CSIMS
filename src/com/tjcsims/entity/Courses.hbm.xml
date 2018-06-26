@@ -25,5 +25,13 @@
         <property name="coursesCredit" type="short">
             <column name="CoursesCredit" />
         </property>
+        <set name="scoreses" inverse="true">
+            <key>
+                <column name="CoursesId">
+                    <comment>课程编号</comment>
+                </column>
+            </key>
+            <one-to-many class="com.tjcsims.entity.Scores" />
+        </set>
     </class>
 </hibernate-mapping>

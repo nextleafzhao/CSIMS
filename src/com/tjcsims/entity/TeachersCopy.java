@@ -15,6 +15,7 @@ public class TeachersCopy implements java.io.Serializable {
 	private short teachersSex;
 	private String teachersBirthday;
 	private String teachersEmail;
+	private String remarks;
 
 	// Constructors
 
@@ -24,13 +25,14 @@ public class TeachersCopy implements java.io.Serializable {
 
 	/** full constructor */
 	public TeachersCopy(Integer facultiesId, String teachersPasswd, String teachersName, short teachersSex,
-			String teachersBirthday, String teachersEmail) {
+			String teachersBirthday, String teachersEmail, String remarks) {
 		this.facultiesId = facultiesId;
 		this.teachersPasswd = teachersPasswd;
 		this.teachersName = teachersName;
 		this.teachersSex = teachersSex;
 		this.teachersBirthday = teachersBirthday;
 		this.teachersEmail = teachersEmail;
+		this.remarks = remarks;
 	}
 
 	// Property accessors
@@ -89,6 +91,14 @@ public class TeachersCopy implements java.io.Serializable {
 
 	public void setTeachersEmail(String teachersEmail) {
 		this.teachersEmail = teachersEmail;
+	}
+
+	public String getRemarks() {
+		return this.remarks;
+	}
+
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
 	}
 
 }

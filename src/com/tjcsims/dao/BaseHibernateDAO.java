@@ -14,6 +14,12 @@ public class BaseHibernateDAO implements IBaseHibernateDAO {
 	public Session getSession() {
 		return HibernateSessionFactory.getSession();
 	}
+
+	@Override
+	public void queryScore() {
+		// TODO 自动生成的方法存根
+		
+	}
 	
 }
 

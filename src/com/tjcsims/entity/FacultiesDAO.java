@@ -8,6 +8,8 @@ import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.tjcsims.dao.BaseHibernateDAO;
+
 /**
  * A data access object (DAO) providing persistence and search support for
  * Faculties entities. Transaction control of the save(), update() and delete()
